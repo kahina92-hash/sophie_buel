@@ -1,0 +1,711 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+.header-principal {
+  padding: 1.8rem;
+}
+body {
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/** end reset css**/
+body {
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  text-decoration: none;
+}
+header li a {
+  text-decoration: none;
+  color: black;
+}
+section {
+  margin: 50px 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+
+h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+
+#introduction {
+  display: flex;
+  align-items: center;
+}
+#introduction figure {
+  flex: 1;
+}
+#introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+#introduction article {
+  flex: 1;
+}
+#introduction h2 {
+  margin-bottom: 1em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.container div {
+  border: 1px solid #1d6154;
+  border-radius: 20px;
+
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+.active {
+  background: #1d6154;
+  color: white;
+}
+.text {
+  color: #df0404;
+}
+#introduction p {
+  margin-bottom: 0.5em;
+}
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.gallery {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}
+#contact {
+  width: 50%;
+  margin: auto;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.login__form input {
+  display: flex;
+  gap: 1rem;
+  float: right;
+
+  width: 500px;
+}
+input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+label {
+  margin: 2em 0 1em 0;
+  border: none;
+}
+#contact textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+/* input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+  float: center;
+} */
+.submit,
+.login__form input[type="submit"] {
+  /* Marges supérieures et inférieures de 20px, marges latérales automatiques */
+  display: flex;
+  align-self: center;
+
+  /* Espace à l'intérieur du bouton */
+  background-color: #1d6154; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  border: none; /* Supprime la bordure */
+  border-radius: 60px; /* Arrondi les coins du bouton */
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  font-size: 16px; /* Taille de la police */
+  width: 200px;
+}
+.submit {
+  margin-top: 2rem;
+}
+footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+}
+
+/*page de connexion*******************/
+
+h2 {
+  text-align: center;
+}
+.title-modal {
+  text-align: center;
+  color: #000000;
+  font-size: 26px;
+  font-weight: 800px;
+}
+.input-field {
+  margin-bottom: 15px;
+}
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+.input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+.js-modal {
+  color: #fff;
+}
+.btn {
+  background-color: #1d6154;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: #4cae4c;
+}
+.error-login {
+  border: 1px solid #fa1414;
+  background-color: #fa1414;
+  color: white;
+}
+.edit {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.5rem;
+}
+.edit a {
+  text-decoration: none;
+}
+.error-login {
+  border: 1px solid red;
+  background-color: #b85151;
+  width: 60%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.modal-wrapper,
+.add-modal {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  overflow: auto;
+
+  background-color: white;
+
+  width: 600px;
+  height: 610px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  gap: 15px;
+}
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 50px;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.8);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.gallerie-modal img {
+  display: grid;
+  height: 105px;
+  width: 78px;
+  position: relative;
+}
+.gallerie-modal {
+  display: grid;
+
+  grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+  justify-content: center;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.gallerie-modal figcaption {
+  display: none;
+}
+.add-modal {
+  visibility: hidden;
+
+  flex-direction: column;
+
+  gap: 3rem;
+}
+.modal2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+#titlemodale {
+  color: black;
+  display: flex;
+  font-weight: 200;
+  font-size: 26px;
+  text-align: center;
+  padding: 15px;
+}
+#add-work,
+.valider {
+  display: block;
+  margin: auto;
+  width: 237px;
+  height: 36px;
+
+  border-radius: 60px;
+
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+#add-work {
+  background-color: #1d6154;
+}
+/* Style pour le bouton "gris" */
+.gris {
+  background-color: grey;
+  color: white;
+}
+
+/* Style pour le bouton "rouge" */
+.rouge {
+  background-color: red;
+  color: white;
+}
+
+/* Style pour le bouton "vert" */
+.vert {
+  background-color: green;
+  color: white;
+}
+.js-modal-close {
+  display: block;
+  float: right;
+  font-size: 24px;
+  color: rgb(8, 8, 8);
+  margin-left: auto; /* Pousse l'élément vers la droite */
+  padding: 1rem;
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid #b3b3b3;
+  width: 420px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* Supprime la bordure par défaut */
+}
+.ajout-photo form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+.modal-closer {
+  display: flex;
+  justify-content: space-between;
+}
+.js-modal-closer,
+.js-modal-back {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+}
+.image-container {
+  position: relative;
+}
+.image-container .delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffff;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: black;
+  padding: 3px;
+  text-align: center;
+}
+
+.ajout-file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #e8f1f6;
+  width: 430px;
+  margin-top: -10px;
+}
+.file-section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.ajout-file i {
+  font-size: 69px;
+  color: #b9c5cc;
+}
+#fileInput {
+  display: none;
+}
+.ajout-file label {
+  border-radius: 50px;
+  border: 1px solid #cbd6dc;
+  padding: 10px;
+  background-color: #b9c5cc;
+  color: #306685;
+}
+
+/**la nouvelle modal ***/
+.hidden {
+  display: none;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Couleur et transparence de l’overlay */
+  z-index: 999; /* Juste en dessous de la modale */
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.8);
+}
+.list,
+.add {
+  position: fixed; /* Pour que la modale reste en place même en scrollant */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Pour centrer la modale */
+  z-index: 9999;
+  background-color: #ffff; /* Fond de la modale */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pour un peu de style */
+  width: 600px;
+  height: 640px;
+  gap: 30px;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.header {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+}
+.back-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+#category {
+  border: none;
+  height: 50px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.metions-legales {
+  float: right;
+  padding: 1rem;
+}
+.login {
+  max-width: 500px; /* Ajustez la largeur comme souhaité */
+  margin: 0 auto; /* Centre le bloc horizontalement */
+  padding: 20px; /* Ajoute un peu d'espace à l'intérieur du bloc */
+}
+
+.login h2 {
+  text-align: center; /* Centre le titre */
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+}
+
+.login__form label {
+  margin-top: 10px; /* Espace entre le label et l'input */
+}
+
+.login__form input {
+  padding: 10px; /* Espace à l'intérieur des inputs */
+  margin-top: 5px; /* Espace entre l'input et le label */
+  border: 1px solid #ccc; /* Bordure des inputs */
+  border-radius: 4px; /* Arrondir les coins des inputs */
+}
+
+.alredyLogged__error,
+.loginEmail__error,
+.loginMdp__error {
+  color: red; /* Couleur des messages d'erreur */
+  margin-top: 5px; /* Espace entre l'input et le message d'erreur */
+}
+.forget-password {
+  color: #3d3d3d;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+}
+.portfolio-wrapper {
+  display: block;
+  margin: auto;
+}
+.projet {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.edit-modale,
+.fa-regular {
+  text-decoration: none;
+  margin-top: 0.5rem;
+  color: #000000;
+}
+.editregular {
+  color: #fff;
+}
+.bloc-lien {
+  font-size: 16px;
+}
